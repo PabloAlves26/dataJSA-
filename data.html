@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição</title>
+    <style>
+        html,body {
+            width: 100%; height: 100%;
+            color:white; 
+            background: linear-gradient(135deg, green, white, blue) repeat no-repeat;
+        }
+        h2,h3 {
+            color: black;
+        }
+    </style>
+    <script>
+        var nome;
+        var email;
+        var num = 0;
+
+        function escrever(quadro) {
+            info = "Usuário número: " + (++num) + "\n";
+            info += "Nome: " + nome + "\n";
+            info += "E-mail: " + email + "\n\n";
+            quadro.value += info;
+        }
+    </script>
+</head>
+<body>
+   <form>
+       <h2 align="center">Cadastro</h2>
+       <div align="center">
+           <div>
+               <script>
+                   hoje = new Date();
+                   dia = hoje.getDate();
+                   mes = hoje.getMonth() + 1;
+                   ano = hoje.getYear() + 1900;
+                   document.write("<h3>Hoje: " + dia + "/" +  mes + "/" + ano + "<h3>");
+               </script>
+           </div>
+            <input type="button" value="Digitar Nome" onclick="nome=prompt('Nome','') ">
+            <input type="button" value="Digitar E-mail" onclick="email=prompt('Email','')">
+            <input type="button" value="Cadastrar" onclick="escrever(this.form.Area)">
+            <p><textarea rows="10" cols="40" name="Area"></textarea></p>
+            </div>
+   </form>
+</body>
+</html>
